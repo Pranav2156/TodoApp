@@ -73,14 +73,14 @@ function App() {
       <Navbar />
       <hr />
 
-      <div className='bg-red-700/20  mx-10 my-5 p-4 rounded-2xl h-[80vh] '>
+      <div className='bg-red-700/20  my-5 p-4 rounded-2xl h-[90vh] w-1/2 mx-auto media'>
         <div>
-          <div className='font-bold text-3xl my-2'>
+          <div className='font-bold text-3xl text-center mb-8'>
             Add a Todo
           </div>
-          <div className='flex gap-10'>
-            <input type="text" onChange={HandleChange} value={todo} className='bg-white border-2 border-black w-[20vw]' />
-            <button onClick={HandleAdd} disabled={todo.length<1} className='bg-red-600 disabled:bg-red-400 px-2 py-1 rounded-xl text-white  cursor-pointer'>Add</button>
+          <div className='flex '>
+            <input type="text" onChange={HandleChange} value={todo} className='bg-white  w-[45vw] rounded-l-2xl h-10 text-[20px] p-2' placeholder='Enter a Todo....'/>
+            <button onClick={HandleAdd} disabled={todo.length<1} className='bg-red-600 disabled:bg-red-400 px-4   py-1  text-white  cursor-pointer rounded-r-2xl'>Add</button>
           </div>
         </div>
             <div className='font-bold text-2xl my-5'>
@@ -93,16 +93,17 @@ function App() {
 
            return (showFinished || !item.isCompleted) && <div key={item.id} className='mt-4'>
 
-          <div className='flex gap-5 w-1/3 justify-between'>
-          <div className='flex gap-2'>
+          <div className='flex gap-5 w-[60%] justify-between'>
+          <div className='flex gap-2 '>
           <input type="checkbox" onChange={HandleCheck} name={item.id} checked={item.isCompleted} id="" />
             <span className={item.isCompleted?"line-through":""}>
               {item.todo}
             </span>
             </div>
-            <div className='space-x-3'>
-            <button onClick={()=>HandleEdit(item.id)} className='bg-red-600 px-2 py-1 rounded-xl text-white cursor-pointer w-5'>Edit </button>
-            <button onClick={()=>{HandleDelete(item.id)}} className='bg-red-600 px-2 py-1 rounded-xl text-white  cursor-pointer'>Delete</button>
+            <div className='flex gap-10'>
+            <button onClick={()=>HandleEdit(item.id)} className='bg-red-600 px-2 py-1 rounded-xl text-white cursor-pointer flex text-[19x]'><FaEdit size={25}/>
+                    Edit</button>
+            <button onClick={()=>{HandleDelete(item.id)}} className='bg-red-600 px-2 py-1 rounded-xl text-white  cursor-pointer '>Delete</button>
             </div>
 
           </div>
