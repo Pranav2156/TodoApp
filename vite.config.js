@@ -7,5 +7,5 @@ export default defineConfig({
   plugins: [react(),
      tailwindcss(),
   ],
-  
+  base: 'https://pranav2156.github.io/TodoApp/'
 })
