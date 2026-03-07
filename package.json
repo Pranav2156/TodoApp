@@ -1,5 +1,6 @@
 {
   "name": "todo",
+  "homepage": "https://pranav2156.github.io/TodoApp",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-  "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",
@@ -31,4 +32,5 @@
     "globals": "^16.5.0",
     "vite": "^7.2.4"
   }
+  
 }
